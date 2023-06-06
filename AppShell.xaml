@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Times_do_Brasil.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:Times_do_Brasil.Views"
+    xmlns:local="clr-namespace:Times_do_Brasil"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Shell.UnselectedColor="Black"
+    Shell.TabBarUnselectedColor="LightGrey"
+    Shell.NavBarHasShadow="True"
+    Shell.BackgroundColor="Green"
+    Shell.TabBarBackgroundColor="Green"
+    Shell.TabBarTitleColor="LightGreen">
+
+    <TabBar>
+        <Tab Title="Inicio" Icon="home">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab Title="Times" Icon="home">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate view:TabelaPage}"
+                Route="TabelaPage" />
+        </Tab>
+        <Tab Title="Atletas" Icon="home">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+    </TabBar>
+</Shell>

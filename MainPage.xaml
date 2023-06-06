@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Times_do_Brasil.MainPage">
+
+    <ScrollView Margin="0,0,0,0">
+        <!--<Grid RowDefinitions="Auto,Auto">
+            <Image Source="brasileirao"/>
+            <CollectionView ItemsSource="{Binding TimesBR}" Grid.Row="1">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="3" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowDefinitions="Auto,Auto"  Margin="15,0,10,0" RowSpacing="0">
+                            <Frame BackgroundColor="#EFEFEF" Padding="20" Margin="0,20,0,5" BorderColor="LightGrey" HasShadow="True" CornerRadius="5">
+                                <Image Source="{Binding Escudo}" WidthRequest="60" HeightRequest="60"/>
+                            </Frame>
+                            <Label Grid.Row="1" Text="{Binding Name}" TextColor="Black" FontSize="Subtitle"  FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>-->
+
+        <!--<CollectionView ItemsSource="{Binding TimesBR}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <TableView Intent="Data" Margin="10,20,10,20" VerticalOptions="Center" HorizontalOptions="Center">
+                        <TableRoot>
+                            <TableSection>
+                                <ImageCell 
+                                    
+                                    Text="{Binding Name}"
+                                    TextColor="Green"
+                                    IsContextActionsLegacyModeEnabled="True"
+                                    Detail="Learn about your XBox and its capabilities."
+                                    ImageSource="{Binding Escudo}"/>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
+        <ListView ItemsSource="{Binding TimesBR}" Margin="0,40,0,40">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                        
+                        ImageSource="{Binding Escudo}"
+                        Text="{Binding Name}"
+                        />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ScrollView>
+</ContentPage>
